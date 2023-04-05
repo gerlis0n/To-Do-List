@@ -20,14 +20,22 @@ export const ListItem = ({ item, onChange, deleteTask }: Props) => {
           onChange={e => onChange(item.id, e.target.checked)}
         />
       </div>
-      <label>{item.task}</label>
+      <label>
+        <p>
+          {item.task}
+        </p>
+      </label>
       <C.Icons>
         <img 
           src={imageDelete}
           alt="Icone para deletar"
           onClick={() => deleteTask(item.id)}
         />
-        <img src={imageEdit} alt="Icone para editar"/>
+        <img
+          src={imageEdit}
+          alt="Icone para editar"
+        />
+        
       </C.Icons>
     </C.Container>
   );

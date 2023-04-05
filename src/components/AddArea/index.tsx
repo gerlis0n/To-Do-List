@@ -9,6 +9,7 @@ export const AddArea = ({ onEnter }: Props) => {
   const [inputText, setInputText] = useState('');
 
   const addTask = () => {
+    if (!inputText) return alert("Preencha uma tarefa");
     setInputText('');
     onEnter(inputText);
   }

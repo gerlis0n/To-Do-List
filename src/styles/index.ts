@@ -42,26 +42,3 @@ export const Container = styled.div`
   flex-grow: 1;
   flex: none;
 `;
-
-export const TaskBoard = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 10px;
-  width: 860px;
-  height: 19px;
-`;
-
-export const Tasks = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 860px;
-  height: 626px;
-  border: 2px dashed #437EB1;
-  flex: none;
-  align-self: stretch;
-  flex-grow: 1;
-`;

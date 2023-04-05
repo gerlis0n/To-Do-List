@@ -41,29 +41,31 @@ export const Container = styled.div(({ done }: ContainerProps)=>(
       height: 28px;
       left: 9px;
       top: 25px;
-      background: #0089FF;
       border-radius: 4px;
     }
   }
   
   label {
     display: flex;
+    position: relative;
     flex-direction: row;
     align-items: flex-start;
     padding: 10px 20px;
     gap: 10px;
     width: 771px;
-    height: 79px;
+    min-height: 79px;
+    flex-wrap: wrap;
     background: #1B1D37;
-    font-weight: 500;
-    letter-spacing: 0em;
-    text-align: left;
     flex: none;
     order: 1;
     align-self: stretch;
     flex-grow: 1;
-    color: ${done ? '#636AC7;' : '#FFFFFF;'};
-    text-decoration-line: ${done ? 'line-through' : 'initial'};
+    p {
+      position: absolute;
+      font-weight: 500;
+      color: ${done ? '#636AC7;' : '#FFFFFF;'};
+      text-decoration-line: ${done ? 'line-through' : 'initial'};
+    }
   }
 `
 ));

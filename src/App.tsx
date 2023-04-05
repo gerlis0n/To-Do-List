@@ -28,27 +28,22 @@ export const Main = () => {
   }
 
   const deleteTask = (id: number) => {
-    var filtered = list.filter((item) => item.id === id)
+    const filtered = [...list].filter(list => list.id !== id)
+    setList(filtered);
   };
 
   return (
     <C.Body>
       <C.Container>
         <AddArea onEnter={handleAddTask} />
-        <C.TaskBoard>
-          Tarefas a fazer
-          Tarefas concluídas
-        </C.TaskBoard>
-        <C.Tasks >
           {list.map((item, index) => (
-            <ListItem 
+            <ListItem
               key={index}
               item={item}
               onChange={handleTaskChange}
               deleteTask={deleteTask}
             />
           ))}
-        </C.Tasks>
       </C.Container>
     </C.Body>
   );
